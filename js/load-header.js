@@ -26,6 +26,7 @@ function loadHeader() {
                             <li><a href="/" class="mobile-nav-link ${currentPath.endsWith('/olachea-group/') || currentPath.endsWith('/') ? 'active' : ''}" data-i18n="nav_home">Home</a></li>
                             <li><a href="/about_us/" class="mobile-nav-link ${currentPath.includes('about') ? 'active' : ''}" data-i18n="nav_about">About Us</a></li>
                             <li><a href="/contact/" class="mobile-nav-link ${currentPath.includes('contact') ? 'active' : ''}" data-i18n="nav_contact">Contact</a></li>
+                            <li><a href="/foods/blog/" class="mobile-nav-link ${currentPath.includes('blog') ? 'active' : ''}" data-i18n="nav_blog" style="display: flex; align-items: center; justify-content: center;"><img src="/images/blog.png" alt="Blog" style="width: 16px; height: 16px; margin-right: 8px;">Blog</a></li>
                             <li>
                                 <a href="https://olacheagroup.com/webmail/log-in" class="mobile-nav-link user-login-mobile" target="_blank" rel="noopener noreferrer">
                                     <div class="mobile-user-icon-wrapper">
@@ -45,6 +46,7 @@ function loadHeader() {
                     <li><a href="/" class="nav-link ${currentPath.endsWith('/olachea-group/') || currentPath.endsWith('/') ? 'active' : ''}" id="homeLink" data-i18n="nav_home">Home</a></li>
                     <li><a href="/about_us/" class="nav-link ${currentPath.includes('about') ? 'active' : ''}" id="aboutLink" data-i18n="nav_about">About Us</a></li>
                     <li><a href="/contact/" class="nav-link ${currentPath.includes('contact') ? 'active' : ''}" id="contactLink" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="/foods/blog/" class="nav-link ${currentPath.includes('blog') ? 'active' : ''}" id="blogLink" data-i18n="nav_blog" style="display: flex; align-items: center;"><img src="/images/blog.png" alt="Blog" style="width: 16px; height: 16px; margin-right: 8px;">Blog</a></li>
                     <li class="user-login-container">
                         <a href="https://olacheagroup.com/webmail/log-in" class="user-login-link" target="_blank" rel="noopener noreferrer" aria-label="User Login">
                             <div class="user-icon-wrapper">

@@ -145,7 +145,8 @@
     /* Responsive Styles */
     @media (max-width: 768px) {
         .logo {
-            height: 35px; /* Logo más pequeño en móviles */
+            height: 14px !important; /* Logo más pequeño en móviles */
+            max-height: 14px !important;
         }
         
         .mobile-menu-btn {
@@ -207,7 +208,7 @@
         left: 0;
         width: 100%;
         height: auto; /* Cambiado para ajustarse al contenido */
-        min-height: 350px; /* Aumentado para incluir LOGIN */
+        min-height: 280px; /* Reducido para menos espacio */
         background-color: #166534;
         z-index: 1001;
         display: flex;
@@ -218,8 +219,8 @@
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         transform: translateY(-100%);
-        padding-top: 70px;
-        padding-bottom: 30px; /* Espacio inferior para LOGIN */
+        padding-top: 60px;
+        padding-bottom: 20px; /* Espacio inferior para LOGIN */
         box-sizing: border-box;
         border-radius: 0 0 20px 20px; /* Esquinas redondeadas inferiores */
     }
@@ -233,7 +234,7 @@
     .mobile-menu-container {
         text-align: center;
         width: 100%;
-        padding: 20px;
+        padding: 15px 20px;
     }
     
     .mobile-menu-nav {
@@ -243,7 +244,7 @@
     }
     
     .mobile-menu-nav li {
-        margin: 12px 0;
+        margin: 6px 0;
         opacity: 0;
         transform: translateY(10px);
         transition: all 0.3s ease;
