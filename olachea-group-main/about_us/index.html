@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Olachea Group's history, a family farm and group that has been pioneering agricultural technology and sustainable practices for over 80 years.">
+    <title>Olachea Group - About Us</title>
+    <link rel="icon" type="image/webp" href="../favicoin_kaf.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL263JCBJE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YL263JCBJE');
+    </script>
+    <!-- jQuery para cargar el header -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#header-placeholder").load("../includes/header.html");
+        });
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+        variants: {
+          extend: {
+            scale: ['hover', 'group-hover'],
+            transform: ['hover', 'group-hover'],
+          },
+        },
+        plugins: [],
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .slide-container {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Estilos para la sección 1 */
+        .section-1 {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 25%, #1d4ed8 50%, #1e40af 75%, #1e3a8a 100%);
+        }
+        
+        /* Estilos para la sección 2 */
+        .section-2 {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 25%, #1e40af 50%, #1e3a8a 75%, #172554 100%);
+        }
+        
+        /* Animaciones */
+        .content-fade {
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-reveal {
+            animation: revealContent 1.5s ease-out;
+        }
+        
+        @keyframes revealContent {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .mission-card {
+            animation: slideInLeft 1.2s ease-out;
+        }
+        
+        .vision-card {
+            animation: slideInRight 1.2s ease-out 0.3s both;
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .stat-counter {
+            animation: countUp 2s ease-out 0.5s both;
+        }
+        
+        @keyframes countUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .floating-element, .floating-icon {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(2deg); }
+        }
+        
+        .glass-card, .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .accent-line {
+            background: linear-gradient(90deg, #fbbf24, #10b981, #3b82f6);
+            height: 4px;
+            width: 80px;
+            margin: 15px auto 30px;
+        }
+        
+        .slide-container {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gradient-reversed {
+            background: linear-gradient(135deg, #1a3a4a 0%, #0d1e26 100%);
+            color: white;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating-icon {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .pulse-icon {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .accent-line {
+            background: linear-gradient(90deg, #f59e0b, #10b981, #3b82f6);
+            height: 4px;
+            width: 80px;
+            margin: 15px auto 30px;
+        }
+        
+        .category-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Estilos para animaciones */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .content-fade {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .content-fade.is-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.8s ease-in;
+        }
+        
+        .fade-in.is-visible {
+            opacity: 1;
+        }
+        
+        .content-fade {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .content-fade.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .mission-card.is-visible {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        
+        .vision-card.is-visible {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="m-0 p-0" style="font-family: 'Montserrat', sans-serif;">
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main content -->
+    <main class="w-full">
+        <!-- Sección 1: Who We Are -->
+        <section class="slide-container section-1">
+            <div class="flex flex-col md:flex-row w-full max-w-7xl">
+                <!-- Background Decorative Elements -->
+                <div class="absolute top-16 right-16 text-white opacity-5">
+                    <img src="../foods/images/Logo-kaf-en-blanco.svg" alt="Icono decorativo Olachea" class="w-16 h-12 floating-element">
+                </div>
+                <div class="absolute bottom-20 left-16 text-white opacity-5">
+                    <img src="../foods/images/Logo-kaf-en-blanco.svg" alt="Icono decorativo Olachea" class="w-16 h-12 floating-icon" style="animation-delay: 2s;">
+                </div>
+
+                <!-- Left Section - Main Content -->
+                <div class="w-full md:w-3/5 p-4 md:p-12 flex flex-col justify-center">
+                    <div class="animate-on-scroll content-fade mb-8">
+                        <div class="flex items-center mb-4">
+                            <img src="../images/Logo-kaf-a-color.svg" alt="Certificación Orgánica KAF" class="w-16 h-12 object-contain">
+                            <span class="text-white text-80 font-semibold tracking-wide">OLACHEA GROUP</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-black text-white mb-3 leading-tight">WHO WE ARE</h1>
+                        <div class="w-24 h-1 bg-yellow-400"></div>
+                    </div>
+
+                    <div class="animate-on-scroll content-fade mb-8" style="transition-delay: 0.2s;">
+                        <p class="text-white text-base leading-relaxed mb-6">
+                            At Olachea Group, we are a multi-sector company rooted in agriculture and expanded into the primary, chemical, and industrial markets. With over <span class="font-bold text-yellow-300">84 years</span> working the land, our legacy began in the fields and continues to grow worldwide.
+                        </p>
+                        <p class="text-blue-100 text-base leading-relaxed">
+                            Born from a family of farmers, our journey has been one of transformation — blending tradition with precision agriculture and cutting-edge technology to create sustainable, resource-efficient solutions for modern farming.
+                        </p>
+                    </div>
+
+                    <div class="animate-on-scroll content-fade grid grid-cols-1 sm:grid-cols-2 gap-4" style="transition-delay: 0.4s;">
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center mb-2"><i class="fas fa-seedling text-green-300 text-lg mr-3"></i><h3 class="text-white font-semibold text-sm">HERITAGE</h3></div>
+                            <p class="text-blue-100 text-xs">Family tradition in farming excellence</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center mb-2"><i class="fas fa-microscope text-purple-300 text-lg mr-3"></i><h3 class="text-white font-semibold text-sm">INNOVATION</h3></div>
+                            <p class="text-blue-100 text-xs">Cutting-edge agricultural technology</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section - Stats and Visual -->
+                <div class="w-full md:w-2/5 p-4 md:p-8 flex flex-col justify-center">
+                    <div class="animate-on-scroll content-fade text-center mb-8" style="transition-delay: 0.6s;">
+                        <div class="glass-card rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-4 p-4 overflow-hidden" style="border-radius: 9999px !important;">
+                            <div class="text-center w-full">
+                                <div id="yearsCounter" class="text-4xl font-black text-yellow-300 leading-none">84+</div>
+                                <div class="text-xs font-semibold text-white mt-1">YEARS</div>
+                            </div>
+                        </div>
+                        <p class="text-white font-semibold text-sm">Agricultural Leadership</p>
+                    </div>
+
+                    <div class="relative z-10 space-y-3">
+                        <h3 class="text-white font-bold text-lg mb-4 text-center animate-on-scroll fade-in">Our Expertise</h3>
+                        <div class="bg-blue-800/90 p-3 rounded-lg flex items-center justify-between border border-blue-600/50 hover:border-blue-400/50 transition-colors duration-200 animate-on-scroll fade-in" style="transition-delay: 0.1s">
+                            <div class="flex items-center"><i class="fas fa-flask text-blue-300 mr-3"></i><span class="text-white text-sm font-medium">Fertilizers & Bio-stimulants</span></div>
+                            <i class="fas fa-check-circle text-green-400"></i>
+                        </div>
+                        <div class="bg-blue-800/90 p-3 rounded-lg flex items-center justify-between border border-blue-600/50 hover:border-blue-400/50 transition-colors duration-200 animate-on-scroll fade-in" style="transition-delay: 0.2s">
+                            <div class="flex items-center"><i class="fas fa-chart-line text-green-300 mr-3"></i><span class="text-white text-sm font-medium">Precision Agriculture</span></div>
+                            <i class="fas fa-check-circle text-green-400"></i>
+                        </div>
+                        <div class="bg-blue-800/90 p-3 rounded-lg flex items-center justify-between border border-blue-600/50 hover:border-blue-400/50 transition-colors duration-200 animate-on-scroll fade-in" style="transition-delay: 0.3s">
+                            <div class="flex items-center"><i class="fas fa-globe text-yellow-300 mr-3"></i><span class="text-white text-sm font-medium">Global Market Access</span></div>
+                            <i class="fas fa-check-circle text-green-400"></i>
+                        </div>
+                        <div class="bg-blue-800/90 p-3 rounded-lg flex items-center justify-between border border-blue-600/50 hover:border-blue-400/50 transition-colors duration-200 animate-on-scroll fade-in" style="transition-delay: 0.4s">
+                            <div class="flex items-center"><i class="fas fa-desktop text-purple-300 mr-3"></i><span class="text-white text-sm font-medium">AgTech Solutions</span></div>
+                            <i class="fas fa-check-circle text-green-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll content-fade mt-6 flex justify-center space-x-4" style="transition-delay: 1s;">
+                        <div class="glass-card p-2 rounded-lg text-center flex flex-col items-center justify-center w-full">
+                            <img src="../foods/images/sheet_organic.png" alt="Organic" class="w-16 h-16 object-contain mx-auto mb-0.5 flex-shrink-0">
+                            <p class="text-white text-xs font-semibold">CERTIFIED</p>
+                        </div>
+                        <div class="glass-card p-2 rounded-lg text-center flex flex-col items-center justify-center w-full">
+                            <i class="fas fa-award text-green-300 text-5xl w-16 h-16 flex items-center justify-center mx-auto -mb-2 flex-shrink-0"></i>
+                            <p class="text-white text-xs font-semibold">QUALITY</p>
+                        </div>
+                        <div class="glass-card p-2 rounded-lg text-center flex flex-col items-center justify-center w-full">
+                            <i class="fas fa-leaf text-green-300 text-5xl w-16 h-16 flex items-center justify-center mx-auto -mb-2 flex-shrink-0"></i>
+                            <p class="text-white text-xs font-semibold">SUSTAINABLE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Sección 2: Our History -->
+    <section id="our-history" class="slide-container flex-col section-2">
+        <!-- Header Section -->
+        <div class="animate-on-scroll fade-in p-8 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <img src="../images/Logo-kaf-a-color.svg" alt="Logo KAF" class="w-20 h-16 object-contain">
+                <span class="text-white text-sm font-semibold tracking-wide ml-3">OLACHEA GROUP</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-black text-white mb-3">OUR MISSION & VISION</h1>
+            <div class="accent-line w-32 h-1 mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 px-4 md:px-8 pb-8 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-7xl">
+            <!-- Mission Section -->
+            <div class="animate-on-scroll mission-card">
+                <div class="glass-panel rounded-2xl p-6 md:p-8 h-full">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-xl mr-4">
+                            <i class="fas fa-bullseye text-white text-2xl floating-icon"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">MISIÓN</h2>
+                            <p class="text-yellow-300 text-lg font-medium mt-1">Empowering Agriculture, Feeding the Future</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100 text-base leading-relaxed mb-6">
+                        At Olachea Group, our mission is to strengthen national and global food security through agricultural logistics, financing, and high-quality solutions that meet the evolving needs of farmers and agri-businesses worldwide
+                    </p>
+                    <div class="space-y-3 text-white">
+                        <p class="font-semibold mb-2">We are committed to:</p>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                            <span>Delivering innovative tools and technologies for the field</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                            <span>Driving practical development that accelerates agribusiness growth</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                            <span>Building solid, ethical partnerships across the supply chain</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="animate-on-scroll vision-card" style="transition-delay: 0.3s;">
+                <div class="glass-panel rounded-2xl p-6 md:p-8 h-full">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-r from-blue-400 to-purple-500 p-3 rounded-xl mr-4">
+                            <i class="fas fa-rocket text-white text-2xl floating-icon" style="animation-delay: 1s;"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">VISIÓN</h2>
+                            <p class="text-blue-300 text-lg font-medium mt-1">Cultivating the Next Generation of Agriculture</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-100 text-base leading-relaxed mb-6">
+                        Our vision is to become a recognized global leader in agronomic innovation, connecting the primary sector to advanced industrial operations with seamless, tech-driven efficiency.
+                    </p>
+                    <div class="space-y-3 text-white">
+                        <p class="font-semibold mb-2">We aim to lead through:</p>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-star text-yellow-400 mr-3"></i>
+                            <span>Advanced seed genetics and smart fertilizers</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-star text-yellow-400 mr-3"></i>
+                            <span>Precision irrigation systems and biological controls</span>
+                        </div>
+                        <div class="flex items-center text-sm">
+                            <i class="fas fa-star text-yellow-400 mr-3"></i>
+                            <span>Automation software for connected, intelligent farming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Stats Section -->
+        <div class="animate-on-scroll fade-in px-4 md:px-8 pb-6 w-full max-w-7xl" style="transition-delay: 0.6s;">
+            <div class="glass-panel rounded-xl p-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div><div class="text-2xl font-black text-yellow-300 mb-1">84+</div><div class="text-xs font-semibold text-blue-100">Years Experience</div></div>
+                    <div><div class="text-2xl font-black text-green-300 mb-1"><i class="fas fa-infinity"></i></div><div class="text-xs font-semibold text-blue-100">Innovation Focus</div></div>
+                    <div><div class="text-2xl font-black text-blue-300 mb-1"><i class="fas fa-globe"></i></div><div class="text-xs font-semibold text-blue-100">Global Reach</div></div>
+                    <div><div class="text-2xl font-black text-purple-300 mb-1">100%</div><div class="text-xs font-semibold text-blue-100">Quality Commitment</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-12 right-12 text-white opacity-5">
+            <img src="../foods/images/Logo-kaf-en-blanco.svg" alt="Icono decorativo Olachea" class="w-16 h-12 floating-icon">
+        </div>
+        <div class="absolute bottom-12 left-12 text-white opacity-5">
+            <img src="../foods/images/Logo-kaf-en-blanco.svg" alt="Icono decorativo Olachea" class="w-16 h-12 floating-icon" style="animation-delay: 2s;">
+        </div>
+    </section>
+    </main>
+    
+    <div id="footer-placeholder"></div>
+
+    <!-- Script de animación personalizado -->
+    <script>
+        // --- FUNCIÓN PARA ANIMAR CONTADORES ---
+        function animateCounter(counterId, targetNumber, suffix = '') {
+            const counter = document.getElementById(counterId);
+            if (!counter) return;
+
+            const duration = 2000; // 2 segundos de duración
+            const step = Math.ceil(targetNumber / 40); // Ajustar el paso según el número objetivo
+            let current = 0;
+
+            const updateCounter = () => {
+                if (current < targetNumber) {
+                    current += step;
+                    if (current > targetNumber) current = targetNumber;
+                    counter.textContent = current === targetNumber ? current + suffix : current + '+';
+
+                    // Acelerar al principio, desacelerar al final
+                    const progress = current / targetNumber;
+                    const delay = Math.max(10, duration * (1 - Math.pow(progress, 0.5)) / 15);
+
+                    setTimeout(updateCounter, delay);
+                }
+            };
+
+            // Iniciar la animación cuando el elemento sea visible
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCounter();
+                    observer.disconnect();
+                }
+            }, { threshold: 0.5 });
+
+            observer.observe(counter);
+        }
+
+        // --- SCRIPT PRINCIPAL EJECUTADO AL CARGAR EL DOM ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar el contador de años
+            animateCounter('yearsCounter', 84, '+');
+
+            // --- LÓGICA DE ANIMACIÓN EN SCROLL ---
+            const animationObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    } else {
+                        // Opcional: Eliminar la clase para que la animación se repita al volver a hacer scroll
+                        // entry.target.classList.remove('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observar todos los elementos con animación
+            const animatedElements = document.querySelectorAll('.animate-on-scroll, .fade-in, .content-fade, .mission-card, .vision-card');
+            animatedElements.forEach(element => {
+                element.classList.remove('is-visible');
+                animationObserver.observe(element);
+            });
+            
+            // Forzar repintado para asegurar que las transiciones se apliquen
+            setTimeout(() => {
+                document.body.classList.add('animations-ready');
+            }, 100);
+
+            // Efecto de flotación para elementos decorativos
+            const floatingElements = document.querySelectorAll('.floating, .floating-icon');
+            floatingElements.forEach((el, index) => {
+                const delay = index * 0.2;
+                el.style.animation = `float 6s ease-in-out ${delay}s infinite`;
+            });
+        });
+    </script>
+    <div id="footer-placeholder"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#footer-placeholder").load("../includes/footer.html");
+        });
+    </script>
+</body>
+</html>

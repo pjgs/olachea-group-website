@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Olachea Group Blog - Latest news and insights on sustainable agriculture, food technology, and agricultural innovation.">
+    <title>Olachea Group - Blog</title>
+    <link rel="icon" type="image/webp" href="../../favicoin_kaf.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL263JCBJE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YL263JCBJE');
+    </script>
+    
+    <!-- jQuery para cargar el header -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var baseUrl = window.location.protocol + '//' + window.location.host;
+            $("#header-placeholder").load(baseUrl + "/includes/header.html");
+        });
+    </script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+        variants: {
+          extend: {
+            scale: ['hover', 'group-hover'],
+            transform: ['hover', 'group-hover'],
+          },
+        },
+        plugins: [],
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="m-0 p-0" style="font-family: 'Montserrat', sans-serif;">
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main content -->
+    <main style="padding-top: 60px;">
+        <!-- Hero Section -->
+        <section class="slide-container flex items-center justify-center" style="background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #3b82f6 100%); min-height: 50vh;">
+            <div class="text-center text-white px-4 md:px-16 py-8 max-w-5xl fade-in">
+                <!-- Logo -->
+                <div class="logo-container rounded-2xl p-4 md:p-6 mb-6 md:mb-8 mx-auto w-fit glow-effect">
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6">
+                        <img src="../images/Logo-kaf-a-color.svg" alt="Logo KAF" class="w-16 h-16 md:w-20 md:h-20">
+                        <span class="text-white text-xl md:text-3xl font-bold tracking-wider">OLACHEA GROUP</span>
+                    </div>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="text-3xl md:text-5xl font-black mb-4 md:mb-6 tracking-tight leading-tight">
+                    AGRICULTURAL <span class="text-yellow-300">INSIGHTS</span> & NEWS
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-lg md:text-xl font-light mb-6 text-green-100 px-2">
+                    Stay updated with the latest in sustainable agriculture and food innovation
+                </p>
+                
+                <!-- Breadcrumb -->
+                <div class="flex items-center justify-center space-x-2 text-sm text-blue-200">
+                    <a href="../../index.html" class="hover:text-white transition-colors">Inicio</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <a href="../index.html" class="hover:text-white transition-colors">Foods</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-yellow-300">Blog</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Articles Section -->
+        <section class="slide-container p-8">
+            <div class="w-full max-w-7xl">
+
+                <!-- Articles Grid -->
+                <div class="animate-on-scroll fade-in-up grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Green Coffee Processing -->
+                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="relative">
+                            <img src="../images/CAFE.png" alt="Green Coffee Processing" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-white font-bold text-lg mb-3 hover:text-yellow-300 transition-colors">
+                                <a href="green-coffee-processing.html">Green Coffee Processing</a>
+                            </h3>
+                            <p class="text-blue-100 text-sm mb-4 leading-relaxed">
+                                Raw beans • Natural processing • Export ready quality standards for Venezuelan coffee beans.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <img src="../images/Logo-kaf-a-color.svg" alt="Olachea Group" class="w-8 h-8 rounded-full">
+                                    <div>
+                                        <p class="text-white text-xs font-semibold">Olachea Group</p>
+                                        <p class="text-blue-200 text-xs">2 Sep, 2024</p>
+                                    </div>
+                                </div>
+                                <span class="text-blue-200 text-xs">5 min de lectura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Roasted Coffee Excellence -->
+                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="relative">
+                            <img src="../images/CAFE2.png" alt="Roasted Coffee Excellence" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-white font-bold text-lg mb-3 hover:text-yellow-300 transition-colors">
+                                <a href="roasted-coffee-excellence.html">Roasted Coffee Excellence</a>
+                            </h3>
+                            <p class="text-blue-100 text-sm mb-4 leading-relaxed">
+                                Medium roast • Optimal flavor • Premium quality techniques for perfect coffee roasting.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <img src="../images/Logo-kaf-a-color.svg" alt="Olachea Group" class="w-8 h-8 rounded-full">
+                                    <div>
+                                        <p class="text-white text-xs font-semibold">Olachea Group</p>
+                                        <p class="text-blue-200 text-xs">2 Sep, 2024</p>
+                                    </div>
+                                </div>
+                                <span class="text-blue-200 text-xs">6 min de lectura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Ground Coffee Brewing -->
+                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <div class="relative">
+                            <img src="../images/CAFE.png" alt="Ground Coffee Brewing" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-white font-bold text-lg mb-3 hover:text-yellow-300 transition-colors">
+                                <a href="ground-coffee-brewing.html">Ground Coffee Brewing</a>
+                            </h3>
+                            <p class="text-blue-100 text-sm mb-4 leading-relaxed">
+                                Fresh ground • Multiple grinds • Ready to brew techniques for optimal coffee extraction.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <img src="../images/Logo-kaf-a-color.svg" alt="Olachea Group" class="w-8 h-8 rounded-full">
+                                    <div>
+                                        <p class="text-white text-xs font-semibold">Olachea Group</p>
+                                        <p class="text-blue-200 text-xs">2 Sep, 2024</p>
+                                    </div>
+                                </div>
+                                <span class="text-blue-200 text-xs">5 min de lectura</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                        Cargar Más Artículos
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="/js/load-footer.js"></script>
+</body>
+</html>

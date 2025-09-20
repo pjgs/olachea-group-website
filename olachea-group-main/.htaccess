@@ -1,0 +1,13 @@
+ErrorDocument 404 /error.html
+
+# Activar el motor de reescritura de URLs
+RewriteEngine On
+
+# Redirigir cualquier solicitud de "index.html" a la URL limpia (sin él)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*index\.html\ HTTP/
+RewriteRule ^(([^/]+/)*)index\.html$ /$1 [R=301,L]
+
+# Servir silenciosamente el archivo index.html cuando se solicita un directorio
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ $1/index.html [L]

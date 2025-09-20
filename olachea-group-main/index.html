@@ -1,0 +1,293 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Olachea Group specializes in sustainable agricultural solutions and food technology since 1940, delivering quality products from seed to market.">
+    <title>Olachea Group - Harvesting Trust Since 1940</title>
+    <link rel="icon" type="image/webp" href="favicoin_kaf.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL263JCBJE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YL263JCBJE');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px 40px;
+            flex: 1;
+            position: relative;
+        }
+
+        #seccion1 {
+            background: url('images/fondo-home.webp') no-repeat center center / cover;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title .highlight {
+            color: #fbbf24;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover,
+        .service-card-link:hover .service-card {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.8rem;
+            color: white;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .foods-icon {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .tech-icon {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
+
+        .service-icon-card {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .service-card:hover .service-icon,
+        .service-card-link:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        .service-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .service-tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+        }
+
+        .service-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .service-card {
+                padding: 25px 18px;
+                height: 300px;
+            }
+
+            .main-content {
+                padding: 60px 15px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .service-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Footer sticky styles */
+        #footer-placeholder {
+            margin-top: auto;
+        }
+    </style>
+    <!-- jQuery para cargar header y footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#header-placeholder").load("includes/header.html");
+            $("#footer-placeholder").load("includes/footer.html");
+        });
+    </script>
+</head>
+<body>
+    <!-- ///////////////// HEADER //////////////// -->
+    <div id="header-placeholder"></div>
+    
+    <!-- ///////////////// SECCIÓN 1: HERO & SERVICES //////////////// -->
+    <main id="seccion1" class="main-content" style="background: url('images/fondo-home.webp') no-repeat center center / cover !important;">
+        <!-- Hero Title -->
+        <h1 class="hero-title">
+            HARVESTING TRUST <span class="highlight">SINCE 1940</span>
+        </h1>
+        
+        <!-- Services Grid -->
+        <div class="services-container">
+            <!-- Foods Card -->
+            <a href="/olachea-group/foods/" class="service-card-link">
+                <div class="service-card">
+                    <div class="service-icon foods-icon">
+                        <img src="images/Foods.svg" alt="Foods" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                    </div>
+                    <h2 class="service-title">FOODS</h2>
+                    <p class="service-description">
+                        HIGH-GRADE FARM GOODS WORLDWIDE, STORED RIGHT AND READY TO MEET GLOBAL STANDARDS.
+                    </p>
+                    <div class="flex justify-center space-x-1">
+                        <span class="bg-green-500 text-white text-xs px-2 py-1 rounded">Certified</span>
+                        <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded">Fresh</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Technologies Card -->
+            <a href="https://beacons.ai/olacheaca" class="service-card-link" target="_blank">
+                <div class="service-card">
+                    <div class="service-icon tech-icon">
+                        <img src="images/Technologies.svg" alt="Technologies" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                    </div>
+                    <h2 class="service-title">TECHNOLOGIES</h2>
+                    <p class="service-description">
+                        TOP-GRADE AG TECH, FERTILIZERS, AND SOIL-WATER TESTING GEAR BUILT FOR PRECISION AND GLOBAL STANDARDS.
+                    </p>
+                    <div class="flex justify-center space-x-1">
+                        <span class="bg-amber-500 text-white text-xs px-2 py-1 rounded">Innovation</span>
+                        <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Precision</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Service Card -->
+            <a href="https://shavuotsystem.com/" class="service-card-link" target="_blank">
+                <div class="service-card">
+                    <div class="service-icon service-icon-card">
+                        <img src="images/Service.svg" alt="Service" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                    </div>
+                    <h2 class="service-title">SERVICE</h2>
+                    <p class="service-description">
+                        LAB TESTING, CROP GUIDANCE, AND HANDS-ON ADVICE TO BOOST SMART, EFFICIENT FARM WORK.
+                    </p>
+                    <div class="flex justify-center space-x-1">
+                        <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Support</span>
+                        <span class="bg-cyan-500 text-white text-xs px-2 py-1 rounded">Expert</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <!-- ///////////////// FIN SECCIÓN 1 //////////////// -->
+
+    <!-- ///////////////// FOOTER //////////////// -->
+    <div id="footer-placeholder"></div>
+</body>
+</html>

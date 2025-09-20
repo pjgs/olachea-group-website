@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Olachea Group. Contact us for inquiries about our sustainable agricultural solutions, food technologies, and global distribution.">
+    <title>Contact Us - Olachea Group</title>
+    <link rel="icon" type="image/webp" href="../favicoin_kaf.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL263JCBJE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YL263JCBJE');
+    </script>
+    <!-- jQuery para cargar el header -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#header-placeholder").load("../includes/header.html");
+        });
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+        variants: {
+          extend: {
+            scale: ['hover', 'group-hover'],
+            transform: ['hover', 'group-hover'],
+          },
+        },
+        plugins: [],
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .slide-container {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Estilos para las secciones */
+        .section-1 {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 25%, #1d4ed8 50%, #1e40af 75%, #1e3a8a 100%);
+        }
+        
+        .section-2 {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 25%, #1e40af 50%, #1e3a8a 75%, #172554 100%);
+        }
+        
+        /* Glass effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Floating animation */
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Contact form styles */
+        .form-input {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            outline: none;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        /* Map container */
+        .map-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="m-0 p-0" style="font-family: 'Montserrat', sans-serif;">
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main content -->
+    <main class="w-full">
+        <!-- Sección 1: Contact Hero -->
+        <section class="slide-container section-1">
+            <div class="flex flex-col lg:flex-row w-full max-w-7xl px-4">
+                <!-- Background Decorative Elements -->
+                <div class="absolute top-16 right-16 text-white opacity-5">
+                    <img src="../images/Logo-kaf-a-color.svg" alt="Icono decorativo Olachea" class="w-16 h-12 floating-element">
+                </div>
+                <div class="absolute bottom-20 left-20 text-white opacity-5">
+                    <img src="../images/Logo-kaf-a-color.svg" alt="Icono decorativo Olachea" class="w-12 h-10 floating-element" style="animation-delay: -3s;">
+                </div>
+                
+                <!-- Left Content -->
+                <div class="w-full lg:w-3/5 p-4 lg:p-8 flex flex-col justify-center">
+                    <div class="animate-on-scroll slide-in-left">
+                        <img src="../images/Logo-kaf-a-color.svg" alt="Logo KAF" class="w-20 h-16 object-contain mb-6">
+                        <h1 class="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight">
+                            Get In <span class="text-yellow-300">Touch</span>
+                        </h1>
+                        <p class="text-lg text-blue-100 mb-8 leading-relaxed">
+                            Ready to transform your business with our innovative solutions? We're here to help you achieve your goals and drive success through technology and expertise.
+                        </p>
+                        
+                        <!-- Contact Info Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                            <div class="contact-card rounded-xl p-4">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-phone text-green-300 text-xl mr-3"></i>
+                                    <h3 class="text-white font-semibold">Phone</h3>
+                                </div>
+                                <p class="text-blue-100 text-sm">+1 (239) 677-8282</p>
+                            </div>
+                            
+                            <div class="contact-card rounded-xl p-4">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-envelope text-blue-300 text-xl mr-3"></i>
+                                    <h3 class="text-white font-semibold">Email</h3>
+                                </div>
+                                <p class="text-blue-100 text-sm">info@olacheagroup.com</p>
+                            </div>
+                            
+                            <div class="contact-card rounded-xl p-4">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-map-marker-alt text-red-300 text-xl mr-3"></i>
+                                    <h3 class="text-white font-semibold">Address</h3>
+                                </div>
+                                <p class="text-blue-100 text-sm">Oficinas Grupo Olachea<br>Av. Libertador, Vereda N° 9<br>Barquisimeto 3001, Lara</p>
+                            </div>
+                            
+                            <div class="contact-card rounded-xl p-4">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-clock text-yellow-300 text-xl mr-3"></i>
+                                    <h3 class="text-white font-semibold">Hours</h3>
+                                </div>
+                                <p class="text-blue-100 text-sm">Mon-Fri: 9AM-6PM<br>Sat: 10AM-4PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Contact Form -->
+                <div class="w-full lg:w-2/5 p-4 lg:p-8 flex flex-col justify-center">
+                    <div class="animate-on-scroll slide-in-right glass-card rounded-2xl p-6 lg:p-8">
+                        <h2 class="text-2xl font-bold text-white mb-6 text-center">Send us a Message</h2>
+                        
+                        <form id="contactForm" action="../api/contact.php" method="POST" class="space-y-4" onsubmit="return false;">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <input type="text" id="firstName" name="firstName" placeholder="First Name (letters only)" 
+                                           class="form-input w-full px-4 py-3 rounded-lg" 
+                                           pattern="[A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]{3,20}" 
+                                           minlength="3" 
+                                           maxlength="20"
+                                           title="Please enter only letters (3-20 characters)"
+                                           oninput="validateNameInput(this)">
+                                    <p id="firstNameError" class="text-red-400 text-sm mt-1 hidden">Name must contain only letters (3-20 characters)</p>
+                                </div>
+                                <div>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Last Name (letters only)" 
+                                           class="form-input w-full px-4 py-3 rounded-lg" 
+                                           pattern="[A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]{3,20}" 
+                                           minlength="3" 
+                                           maxlength="20"
+                                           title="Please enter only letters (3-20 characters)"
+                                           oninput="validateNameInput(this)">
+                                    <p id="lastNameError" class="text-red-400 text-sm mt-1 hidden">Last name must contain only letters (3-20 characters)</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="Email Address" 
+                                       class="form-input w-full px-4 py-3 rounded-lg" required>
+                            </div>
+                            
+                            <div>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number (e.g., 1234567890)" 
+                                       class="form-input w-full px-4 py-3 rounded-lg" 
+                                       pattern="[0-9]{8,15}" 
+                                       inputmode="numeric"
+                                       minlength="8"
+                                       maxlength="15"
+                                       title="Please enter 8 to 15 digits"
+                                       oninput="validatePhoneInput(this)">
+                                <p id="phoneError" class="text-red-400 text-sm mt-1 hidden">Phone number must be between 8 and 15 digits</p>
+                            </div>
+                            
+                            <div>
+                                <select id="subject" name="subject" class="form-input w-full px-4 py-3 rounded-lg text-gray-800 bg-white border border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                    <option value="" class="text-gray-500">Select Subject</option>
+                                    <option value="general" class="text-gray-800 hover:bg-blue-100">General Inquiry</option>
+                                    <option value="services" class="text-gray-800 hover:bg-blue-100">Services Information</option>
+                                    <option value="partnership" class="text-gray-800 hover:bg-blue-100">Partnership Opportunity</option>
+                                    <option value="support" class="text-gray-800 hover:bg-blue-100">Technical Support</option>
+                                    <option value="other" class="text-gray-800 hover:bg-blue-100">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <textarea id="message" name="message" rows="4" placeholder="Type your message here (max 1000 characters)" 
+                                          class="form-input w-full px-4 py-3 rounded-lg resize-none" 
+                                          maxlength="1000" 
+                                          oninput="updateCharCounter(this)" 
+                                          required></textarea>
+                                <div class="flex justify-between mt-1">
+                                    <p id="messageError" class="text-red-400 text-sm hidden">Message cannot be empty</p>
+                                    <p id="charCounter" class="text-sm text-gray-400 ml-auto">0/1000 characters</p>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full py-3 px-6 rounded-lg font-semibold text-white">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Map & Additional Info -->
+        <section class="slide-container section-2 flex-col">
+            <div class="w-full max-w-7xl px-4">
+                <!-- Header -->
+                <div class="animate-on-scroll fade-in text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">Visit Our Office</h2>
+                    <p class="text-xl text-blue-100">We'd love to meet you in person</p>
+                </div>
+                
+                <!-- Map and Info Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <!-- Map -->
+                    <div class="animate-on-scroll slide-in-left">
+                        <div class="map-container h-96">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.1234567890123!2d-69.3028233!3d10.0782645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e87677d21394ad7%3A0x89a9c3b31f6455db!2sOlachea%20Group!5e0!3m2!1sen!2sve!4v1620000000000!5m2!1sen!2sve" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Info -->
+                    <div class="animate-on-scroll slide-in-right space-y-6">
+                        <div class="glass-panel rounded-xl p-6">
+                            <h3 class="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 text-xl mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-white font-semibold">Expert Team</h4>
+                                        <p class="text-blue-100 text-sm">Over 80 years of combined experience</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 text-xl mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-white font-semibold">24/7 Support</h4>
+                                        <p class="text-blue-100 text-sm">Round-the-clock assistance when you need it</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 text-xl mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-white font-semibold">Custom Solutions</h4>
+                                        <p class="text-blue-100 text-sm">Tailored to your specific business needs</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-300 text-xl mr-3 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-white font-semibold">Proven Results</h4>
+                                        <p class="text-blue-100 text-sm">Track record of successful implementations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-panel rounded-xl p-6">
+                            <h3 class="text-2xl font-bold text-white mb-4">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/olacheaagricultura/" target="_blank" rel="noopener noreferrer" class="contact-card rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fab fa-facebook-f text-blue-300 text-xl"></i>
+                                </a>
+                                <a href="https://www.instagram.com/olachea_group/" target="_blank" rel="noopener noreferrer" class="contact-card rounded-full w-12 h-12 flex items-center justify-center">
+                                    <i class="fab fa-instagram text-blue-300 text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>Copyright ® Olachea Group LLC</p>
+        </div>
+    </footer>
+
+    <!-- Modal de notificación -->
+    <div id="notificationModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 max-w-sm w-full mx-4 transform transition-all duration-300 ease-in-out opacity-0 translate-y-4">
+            <div class="text-center">
+                <div id="modalIcon" class="mx-auto flex items-center justify-center h-16 w-16 rounded-full mb-4">
+                    <i id="modalIconElement" class="text-3xl"></i>
+                </div>
+                <h3 id="modalTitle" class="text-xl font-bold text-gray-900 mb-2"></h3>
+                <p id="modalMessage" class="text-gray-600 mb-6"></p>
+                <button id="closeModal" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Estilos para el modal */
+        #notificationModal.show {
+            display: flex;
+        }
+        #notificationModal.show > div {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Estilos para el campo de teléfono con error */
+        .form-input.border-red-500 {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 1px #ef4444;
+        }
+    </style>
+
+    <script>
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Function to validate name and last name fields
+        function validateNameInput(input) {
+            const nameValue = input.value;
+            const nameRegex = /^[A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]+$/;
+            const errorElement = document.getElementById(`${input.id}Error`);
+            
+            // Validate that it only contains letters and spaces
+            if (nameValue && !nameRegex.test(nameValue)) {
+                // Remove invalid characters
+                input.value = nameValue.replace(/[^A-Za-záéíóúÁÉÍÓÚüÜñÑ\s]/g, '');
+                return false;
+            }
+            
+            // Validate length
+            if (nameValue.length > 0) {
+                if (nameValue.length < 3) {
+                    errorElement.textContent = 'Minimum 3 characters';
+                    errorElement.classList.remove('hidden');
+                    input.classList.add('border-red-500');
+                    return false;
+                } else if (nameValue.length > 20) {
+                    // Trim the value if it exceeds the maximum
+                    input.value = nameValue.substring(0, 20);
+                    errorElement.textContent = 'Maximum 20 characters allowed';
+                    errorElement.classList.remove('hidden');
+                    input.classList.add('border-red-500');
+                    return false;
+                } else {
+                    errorElement.classList.add('hidden');
+                    input.classList.remove('border-red-500');
+                    return true;
+                }
+            } else {
+                errorElement.classList.add('hidden');
+                input.classList.remove('border-red-500');
+                return false;
+            }
+        }
+        
+        // Function to validate phone number field
+        function validatePhoneInput(input) {
+            // Remove any non-numeric characters
+            input.value = input.value.replace(/[^0-9]/g, '');
+            
+            const phoneError = document.getElementById('phoneError');
+            const phoneValue = input.value;
+            
+            // Validate length
+            if (phoneValue.length > 15) {
+                // Trim the value if it exceeds the maximum
+                input.value = phoneValue.substring(0, 15);
+                phoneError.textContent = 'Maximum 15 digits allowed';
+                phoneError.classList.remove('hidden');
+                input.classList.add('border-red-500');
+                return false;
+            } else if (phoneValue.length > 0 && phoneValue.length < 8) {
+                phoneError.textContent = 'Minimum 8 digits required';
+                phoneError.classList.remove('hidden');
+                input.classList.add('border-red-500');
+                return false;
+            } else {
+                phoneError.classList.add('hidden');
+                input.classList.remove('border-red-500');
+                return true;
+            }
+        }
+        
+        // Función para mostrar notificación
+        function showNotification(title, message, isSuccess = true) {
+            const modal = document.getElementById('notificationModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
+            const modalIcon = document.getElementById('modalIcon');
+            const modalIconElement = document.getElementById('modalIconElement');
+            
+            // Configurar título y mensaje
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            
+            // Configurar el ícono y colores según el tipo de notificación
+            if (isSuccess) {
+                modalIcon.className = 'mx-auto flex items-center justify-center h-16 w-16 rounded-full mb-4 bg-green-100';
+                modalIconElement.className = 'fas fa-check-circle text-3xl text-green-600';
+            } else {
+                modalIcon.className = 'mx-auto flex items-center justify-center h-16 w-16 rounded-full mb-4 bg-red-100';
+                modalIconElement.className = 'fas fa-times-circle text-3xl text-red-600';
+            }
+            
+            // Mostrar el modal
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('show');
+                document.querySelector('#notificationModal > div').style.opacity = '1';
+                document.querySelector('#notificationModal > div').style.transform = 'translateY(0)';
+            }, 10);
+            
+            // Configurar el botón de cierre
+            document.getElementById('closeModal').onclick = function() {
+                modal.classList.remove('show');
+                document.querySelector('#notificationModal > div').style.opacity = '0';
+                document.querySelector('#notificationModal > div').style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            };
+            
+            // Cerrar al hacer clic fuera del modal
+            modal.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.classList.remove('show');
+                    document.querySelector('#notificationModal > div').style.opacity = '0';
+                    document.querySelector('#notificationModal > div').style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                    }, 300);
+                }
+            };
+            
+            // Cerrar con la tecla ESC
+            document.onkeydown = function(event) {
+                if (event.key === 'Escape') {
+                    modal.classList.remove('show');
+                    document.querySelector('#notificationModal > div').style.opacity = '0';
+                    document.querySelector('#notificationModal > div').style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                    }, 300);
+                }
+            };
+        }
+        
+        // Función para actualizar el contador de caracteres del mensaje
+        function updateCharCounter(textarea) {
+            const charCount = textarea.value.length;
+            const maxLength = textarea.maxLength;
+            const charCounter = document.getElementById('charCounter');
+            const messageError = document.getElementById('messageError');
+            
+            // Actualizar el contador
+            charCounter.textContent = `${charCount}/${maxLength} caracteres`;
+            
+            // Cambiar el color según la cantidad de caracteres
+            if (charCount > maxLength * 0.9) {
+                charCounter.classList.remove('text-gray-400', 'text-yellow-500');
+                charCounter.classList.add('text-red-500', 'font-medium');
+            } else if (charCount > maxLength * 0.7) {
+                charCounter.classList.remove('text-gray-400', 'text-red-500');
+                charCounter.classList.add('text-yellow-500', 'font-medium');
+            } else {
+                charCounter.classList.remove('text-yellow-500', 'text-red-500', 'font-medium');
+                charCounter.classList.add('text-gray-400');
+            }
+            
+            // Validar el campo
+            if (charCount === 0) {
+                messageError.classList.remove('hidden');
+                textarea.classList.add('border-red-500');
+            } else {
+                messageError.classList.add('hidden');
+                textarea.classList.remove('border-red-500');
+            }
+        }
+        
+        // Inicialización cuando el DOM está cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            animateOnScroll();
+            
+            // Manejar el envío del formulario
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Mostrar indicador de carga
+                    const submitButton = contactForm.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.innerHTML;
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando...';
+                    
+                    // Obtener los datos del formulario
+                    const formData = new FormData(contactForm);
+                    
+                    // Send data with fetch
+                    fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            // If status is 400, get the error message from the response
+                            if (response.status === 400) {
+                                return response.text().then(errorMessage => {
+                                    throw new Error(errorMessage || 'Invalid form data');
+                                });
+                            }
+                            throw new Error('Network error');
+                        }
+                        return response.text();
+                    })
+                    .then(() => {
+                        // Show success message
+                        showNotification('Message Sent!', 'Thank you for contacting us. We will get back to you soon.', true);
+                        // Reset the form
+                        contactForm.reset();
+                        // Reset character counter
+                        updateCharCounter(document.getElementById('message'));
+                    })
+                    .catch(error => {
+                        // Show error message from server or default message
+                        const errorMessage = error.message || 'There was a problem sending your message. Please try again later.';
+                        showNotification('Error', errorMessage, false);
+                        console.error('Error:', error);
+                    })
+                    .finally(() => {
+                        // Restore the button
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    });
+                });
+            }
+            
+            // Cerrar el modal al hacer clic en el botón de cierre
+            const closeModal = document.getElementById('closeModal');
+            if (closeModal) {
+                closeModal.addEventListener('click', function() {
+                    const modal = document.getElementById('notificationModal');
+                    modal.classList.remove('show');
+                    document.querySelector('#notificationModal > div').style.opacity = '0';
+                    document.querySelector('#notificationModal > div').style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                    }, 300);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

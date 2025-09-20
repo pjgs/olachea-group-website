@@ -1,0 +1,294 @@
+
+        /* --- ESTILOS GENERALES Y DE FUENTE --- */
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1e3a8a; /* Color de fondo base por si hay espacios */
+        }
+
+        /* --- CONTENEDOR DE SECCIÓN Y RESPONSIVIDAD --- */
+        .slide-container {
+            width: 100%;
+            min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem; /* Padding para móviles */
+        }
+        @media (min-width: 768px) {
+            .slide-container {
+                padding: 3rem; /* Padding para tablets y PC */
+            }
+        }
+
+        /* --- FONDOS DE SECCIÓN --- */
+        #seccion1 {
+            background: url('images/FONDO%20FOODS.webp') no-repeat center center / cover !important;
+            position: relative;
+        }
+        
+        .agriculture-pattern {
+            background: url('images/FONDO%20FOODS.webp') no-repeat center center / cover !important;
+        }
+        #seccion2, #seccion4, #seccion6, #seccion8, #seccion10, #seccion11 {
+             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 25%, #1d4ed8 50%, #1e40af 75%, #1e3a8a 100%);
+        }
+        /* Gradiente invertido para las secciones especificadas */
+        .gradient-reversed {
+            background: linear-gradient(-45deg, #3b82f6 0%, #2563eb 25%, #1d4ed8 50%, #1e40af 75%, #1e3a8a 100%);
+        }
+        #seccion3.gradient-reversed, #seccion5.gradient-reversed, #seccion7.gradient-reversed, #seccion9.gradient-reversed, #seccion12.gradient-reversed {
+             background: linear-gradient(-45deg, #2563eb 0%, #1d4ed8 25%, #1e40af 50%, #1e3a8a 75%, #172554 100%);
+        }
+
+
+        /* --- EFECTOS Y ANIMACIONES --- */
+        /* Estilo base para todos los elementos de vidrio */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo-container {
+            background: rgba(22, 101, 52, 0.7);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+        }
+        
+        /* Efecto especial para las tarjetas de productos */
+        .category-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(1) translateY(0);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* Efecto de borde sutil para tarjetas de productos */
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            -webkit-mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        /* Efecto hover solo para tarjetas de productos */
+        .category-card:hover {
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Transición suave para tarjetas de productos */
+        .category-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .logo-container { background: rgba(22, 101, 52, 0.7); }
+        .accent-line { background: linear-gradient(90deg, #fbbf24, #10b981, #3b82f6); }
+
+        /* --- LÓGICA DE ANIMACIÓN EN SCROLL --- */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+            will-change: opacity, transform;
+        }
+        
+        /* Efectos de entrada */
+        .fade-in { transform: translateY(20px); }
+        .fade-in-up { transform: translateY(30px); }
+        .content-fade, .slide-up { transform: translateY(40px); }
+        .mission-card, .slide-in-left { transform: translateX(-50px); }
+        .vision-card, .slide-in-right { transform: translateX(50px); }
+        .zoom-in { transform: scale(0.95); }
+        
+        /* Estado visible */
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+        
+        /* --- ANIMACIONES RECURRENTES (FLOTAR, PULSAR) --- */
+        /* --- ANIMACIONES RECURRENTES --- */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { 
+                box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(34, 197, 94, 0.8);
+                transform: scale(1.02);
+            }
+        }
+        
+        /* Clases para aplicar animaciones */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-icon {
+            animation: floatIcon 4s ease-in-out infinite;
+        }
+        
+        .pulse-icon {
+            animation: pulseGlow 2.5s ease-in-out infinite;
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        
+        /* Retrasos para animaciones */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .floating-element, .floating-icon, .floating { animation: float 4s ease-in-out infinite; }
+        .pulse-icon { animation: pulseGlow 2s ease-in-out infinite; }
+        .certification-badge { animation: pulse 2s infinite; }
+        
+        /* New animations for section 4 */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+        /* --- ESTILOS DEL CARRUSEL --- */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 10;
+        }
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .carousel-dot.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+
+        .fade-in-up-delay {
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        .fade-in-up-delay-2 {
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* --- IMÁGENES DE PRODUCTO --- */
+        .product-image { background-size: cover; background-position: center; border-radius: 1rem; }
+        .legumes-img { background-image: url('https://images-prod.healthline.com/hlcmsresource/images/four-bowls-of-beans-1296x728.jpg'); }
+        .coffee-img { background-image: url('https://www.aboutcoffee.org/wp-content/uploads/2024/10/man-harvesting-coffee-from-plant-on-hillside-in-mountains-masthead-1440x720.jpg'); }
+        .cacao-img { background-image: url('https://scx2.b-cdn.net/gfx/news/2021/organic-cocoa-farming.jpg'); }
+        .fruits-img { background-image: url('https://c8.alamy.com/comp/2K3BDAC/tropical-fruits-pineapple-papaya-mangosteen-dragon-fruit-passionfruit-mango-carambola-guava-granadilla-isolated-on-white-background-clippin-2K3BDAC.jpg'); }
+        .musaceae-img { background-image: url('https://agronoblog.com/wp-content/uploads/2024/08/DALL%C2%B7E-2024-08-20-15.32.28-A-highly-realistic-image-of-a-young-banana-plant-Musa-spp.-growing-in-a-field.-The-scene-shows-the-small-plant-with-several-broad-green-leaves-emer-1024x585.webp'); }
+        .vegetables-img { background-image: url('https://www.alstedefarms.com/wp-content/uploads/2024/12/IMG_7387.jpg'); }
+        .roots-img { background-image: url('https://modernfarmer.com/wp-content/uploads/2015/12/yuca.jpg'); }
+        
+        /* --- ESTILOS PARA LOGO DE REEMPLAZO --- */
+        .olachea-logo { width: 36px; height: 36px; object-fit: contain; }
