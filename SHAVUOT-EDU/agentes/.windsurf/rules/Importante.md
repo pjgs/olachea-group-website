@@ -1,0 +1,2 @@
+A menos que el usuario lo solicite explícitamente, nunca ejecutes comandos de terminal fuera del directorio de trabajo.
+Si se necesita RM para una tarea, nunca debe usarse sin la aprobación explícita del usuario y con una explicación clara de las consecuencias.
