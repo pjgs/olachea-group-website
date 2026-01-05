@@ -36,6 +36,14 @@ function loadHeader() {
                             <li><a href="${basePath}/about_us/" class="mobile-nav-link ${currentPath.includes('about') ? 'active' : ''}" data-i18n="nav_about">About Us</a></li>
                             <li><a href="${basePath}/contact/" class="mobile-nav-link ${currentPath.includes('contact') ? 'active' : ''}" data-i18n="nav_contact">Contact</a></li>
                             <li><a href="${basePath}/foods/blog/" class="mobile-nav-link ${currentPath.includes('blog') ? 'active' : ''}" data-i18n="nav_blog"><img src="${basePath}/images/blog.png" alt="Blog" style="display: inline-block; vertical-align: middle; margin-right: 5px; width: 16px; height: 16px;">Blog</a></li>
+                            <li>
+                                <a href="https://olacheagroup.com/webmail/log-in" class="user-login-mobile" target="_blank" rel="noopener noreferrer">
+                                    <div class="mobile-user-icon-wrapper">
+                                        <img src="${basePath}/images/user-svgrepo-com.svg" alt="User Login" class="mobile-user-icon">
+                                    </div>
+                                    LOGIN
+                                </a>
+                            </li>
                         </nav>
                 </div>
             </div>
@@ -48,6 +56,14 @@ function loadHeader() {
                     <li><a href="${basePath}/contact/" class="nav-link ${currentPath.includes('contact') ? 'active' : ''}" id="contactLink" data-i18n="nav_contact">Contact</a></li>
                     <li><a href="${basePath}/foods/blog/" class="nav-link ${currentPath.includes('blog') ? 'active' : ''}" id="blogLink" data-i18n="nav_blog"><img src="${basePath}/images/blog.png" alt="Blog" style="display: inline-block; vertical-align: middle; margin-right: 5px; width: 16px; height: 16px;">Blog</a></li>
                 </ul>
+                <!-- User Login Icon (Desktop) -->
+                <div class="user-login-container">
+                    <a href="https://olacheagroup.com/webmail/log-in" class="user-login-link" target="_blank" rel="noopener noreferrer">
+                        <div class="user-icon-wrapper">
+                            <img src="${basePath}/images/user-svgrepo-com.svg" alt="User Login" class="user-icon">
+                        </div>
+                    </a>
+                </div>
             </nav>
         </div>
     `;
