@@ -20,12 +20,43 @@
 
         gtag('config', 'G-YL263JCBJE');
     </script>
-    <!-- jQuery para cargar el header -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Dynamic Path Resolution and Header Loading -->
     <script>
-        $(document).ready(function () {
-            var baseUrl = window.location.protocol + '//' + window.location.host;
-            $("#header-placeholder").load(baseUrl + "/includes/header.html");
+        // Get base path for GitHub Pages vs root domain
+        function getBasePath() {
+            const path = window.location.pathname;
+            const isGitHubPages = path.includes('/olachea-group-website/');
+            return isGitHubPages ? '/olachea-group-website' : '';
+        }
+
+        // Load HTML content with script execution
+        async function loadHTML(elementId, file) {
+            const basePath = getBasePath();
+            try {
+                const response = await fetch(`${basePath}${file}`);
+                const html = await response.text();
+                const element = document.getElementById(elementId);
+                element.innerHTML = html;
+
+                // Execute scripts in loaded content
+                const scripts = element.querySelectorAll('script');
+                scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    if (script.src) {
+                        newScript.src = script.src;
+                    } else {
+                        newScript.textContent = script.textContent;
+                    }
+                    document.body.appendChild(newScript);
+                });
+            } catch (error) {
+                console.error(`Error loading ${file}:`, error);
+            }
+        }
+
+        // Load header and footer when DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            loadHTML('header-placeholder', '/includes/header.html');
         });
     </script>
     <script>
