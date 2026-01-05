@@ -16,16 +16,16 @@
       gtag('js', new Date());
       gtag('config', 'G-YL263JCBJE');
     </script>
-    
+
     <!-- jQuery para cargar el header -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function(){
-            var baseUrl = window.location.protocol + '//' + window.location.host;
-            $("#header-placeholder").load(baseUrl + "/includes/header.html");
+            $("#header-placeholder").load("/includes/header.html");
         });
     </script>
     
+        
     <script>
       tailwind.config = {
         theme: {
@@ -88,14 +88,41 @@
 
                 <!-- Articles Grid -->
                 <div class="animate-on-scroll fade-in-up grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Green Coffee Processing -->
+                    <!-- Non-GMO White Corn 2025 - FEATURED ARTICLE -->
                     <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                        <a href="non-gmo-white-corn-2025.html" class="block">
+                            <div class="relative">
+                                <img src="images/quality-white-corn-for-food-industry.svg" alt="Non-GMO White Corn 2025" class="w-full h-48 object-cover">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-white font-bold text-lg mb-3 hover:text-yellow-300 transition-colors">
+                                    Non-GMO White Corn 2025
+                                </h3>
+                                <p class="text-blue-100 text-sm mb-4 leading-relaxed">
+                                    Premium quality • Low mycotoxins • Full traceability for high-quality, traceable non-GMO white corn.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <img src="../images/Logo-kaf-a-color.svg" alt="Olachea Group" class="w-8 h-8 rounded-full">
+                                        <div>
+                                            <p class="text-white text-xs font-semibold">Olachea Group</p>
+                                            <p class="text-blue-200 text-xs">19 Sep, 2024</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-blue-200 text-xs">5 min de lectura</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Green Coffee Processing - LINK DISABLED -->
+                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-default">
                         <div class="relative">
                             <img src="../images/CAFE.png" alt="Green Coffee Processing" class="w-full h-48 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-white font-bold text-lg mb-3 hover:text-yellow-300 transition-colors">
-                                <a href="green-coffee-processing.html">Green Coffee Processing</a>
+                            <h3 class="text-white font-bold text-lg mb-3 text-gray-400">
+                                Green Coffee Processing
                             </h3>
                             <p class="text-blue-100 text-sm mb-4 leading-relaxed">
                                 Raw beans • Natural processing • Export ready quality standards for Venezuelan coffee beans.
@@ -113,14 +140,14 @@
                         </div>
                     </article>
 
-                    <!-- Roasted Coffee Excellence -->
-                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <!-- Roasted Coffee Excellence - LINK DISABLED -->
+                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-default">
                         <div class="relative">
                             <img src="../images/CAFE2.png" alt="Roasted Coffee Excellence" class="w-full h-48 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-white font-bold text-lg mb-3 hover:text-yellow-300 transition-colors">
-                                <a href="roasted-coffee-excellence.html">Roasted Coffee Excellence</a>
+                            <h3 class="text-white font-bold text-lg mb-3 text-gray-400">
+                                Roasted Coffee Excellence
                             </h3>
                             <p class="text-blue-100 text-sm mb-4 leading-relaxed">
                                 Medium roast • Optimal flavor • Premium quality techniques for perfect coffee roasting.
@@ -138,14 +165,14 @@
                         </div>
                     </article>
 
-                    <!-- Ground Coffee Brewing -->
-                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+                    <!-- Ground Coffee Brewing - LINK DISABLED -->
+                    <article class="glass-card rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-default">
                         <div class="relative">
                             <img src="../images/CAFE.png" alt="Ground Coffee Brewing" class="w-full h-48 object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-white font-bold text-lg mb-3 hover:text-yellow-300 transition-colors">
-                                <a href="ground-coffee-brewing.html">Ground Coffee Brewing</a>
+                            <h3 class="text-white font-bold text-lg mb-3 text-gray-400">
+                                Ground Coffee Brewing
                             </h3>
                             <p class="text-blue-100 text-sm mb-4 leading-relaxed">
                                 Fresh ground • Multiple grinds • Ready to brew techniques for optimal coffee extraction.
