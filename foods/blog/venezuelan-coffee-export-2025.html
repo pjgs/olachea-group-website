@@ -455,6 +455,17 @@
     <script>
         // Scripts para animaciones y funcionalidades adicionales
         document.addEventListener('DOMContentLoaded', function () {
+            // Fix internal links for GitHub Pages
+            const basePath = getBasePath();
+            if (basePath) {
+                document.querySelectorAll('a[href^="/"]').forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (!href.startsWith(basePath)) {
+                        link.setAttribute('href', basePath + href);
+                    }
+                });
+            }
+
             // Animación de entrada para los elementos
             const animateOnScroll = function () {
                 const elements = document.querySelectorAll('.slide-container, .fade-in');
