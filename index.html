@@ -234,7 +234,24 @@
                 const response = await fetch(fullPath);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const html = await response.text();
-                document.getElementById(elementId).innerHTML = html;
+                const element = document.getElementById(elementId);
+                element.innerHTML = html;
+
+                // Ejecutar scripts que están en el HTML cargado
+                const scripts = element.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    // Copiar atributos
+                    Array.from(oldScript.attributes).forEach(attr => {
+                        newScript.setAttribute(attr.name, attr.value);
+                    });
+                    // Copiar contenido si es inline script
+                    if (!oldScript.src) {
+                        newScript.textContent = oldScript.textContent;
+                    }
+                    // Reemplazar el script antiguo con el nuevo para que se ejecute
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
             } catch (error) {
                 console.error(`Error loading ${filePath}:`, error);
             }
