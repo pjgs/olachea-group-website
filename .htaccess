@@ -1,13 +1,49 @@
+# ============================================================
+# Olachea Group — Apache Rewrite Rules
+# Objetivo: URLs limpias (sin extensión .html visible)
+# Compatible con SiteGround (Apache + mod_rewrite)
+# ============================================================
+
+# Página de error personalizada
 ErrorDocument 404 /error.html
 
-# Activar el motor de reescritura de URLs
+# Activar el motor de reescritura
 RewriteEngine On
 
-# Redirigir cualquier solicitud de "index.html" a la URL limpia (sin él)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*index\.html\ HTTP/
-RewriteRule ^(([^/]+/)*)index\.html$ /$1 [R=301,L]
+# ------------------------------------------------------------
+# BLOQUE 1: REDIRECCIONES 301 (eliminar .html de la URL)
+# Si alguien llega con .html en la URL, redirigir a la URL limpia.
+# Esto evita contenido duplicado y mantiene la URL limpia.
+# ------------------------------------------------------------
 
-# Servir silenciosamente el archivo index.html cuando se solicita un directorio
+# 1a) Redirigir index.html → directorio con barra final
+RewriteCond %{THE_REQUEST} \s/([^?]*?)index\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 1b) Redirigir cualquier archivo .html que NO sea index → sin extensión
+RewriteCond %{THE_REQUEST} \s/([^?]*?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# ------------------------------------------------------------
+# BLOQUE 2: REESCRITURA INTERNA (servir los archivos correctos)
+# El navegador ve la URL limpia; Apache busca el archivo real.
+# ------------------------------------------------------------
+
+# 2a) Si la solicitud ya apunta a un archivo o carpeta existente, no hacer nada
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2b) Si la ruta SIN barra existe como directorio, agregar barra y redirigir
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ $1/index.html [L]
+RewriteCond %{REQUEST_FILENAME}/ -d
+RewriteRule ^(.+[^/])$ $1/ [R=301,L]
+
+# 2c) Si la ruta + /index.html existe (carpeta con índice), servirla internamente
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+)/?$ $1/index.html [L]
+
+# 2d) Si la ruta + .html existe como archivo (ej: /foods/blog/venezuelan-coffee-export-2025)
+#     servirla internamente sin cambiar la URL visible
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
