@@ -17,7 +17,7 @@ function loadHeader() {
     const headerHTML = `
         <div class="header-container">
             <a href="${basePath}/" class="logo-link">
-                <img src="${basePath}/images/logo_horizontal.png" alt="Olachea Group Logo" class="logo">
+                <img src="${basePath}/images/logo_horizontal.svg" alt="Olachea Group Logo" class="logo">
             </a>
             
             <!-- Mobile Menu Button -->
